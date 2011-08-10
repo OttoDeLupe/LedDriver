@@ -17,7 +17,7 @@ enum {FIRST_LED = 1, LAST_LED = 16};
 ****/
 static uint16_t ConvertLEDNumToBit(int ledNum)
 {
-	return 1 << (ledNum - 1);
+  return (uint16_t) (1 << (ledNum - 1));
 }
 
 static void UpdateHardware(void)
