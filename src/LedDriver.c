@@ -37,7 +37,7 @@ static void SetLedImageBit(int ledNum)
 
 static void ClearLedImageBit(int ledNum)
 {
-  ledImage &= ~(ConvertLEDNumToBit(ledNum));
+  ledImage &= (uint16_t) ~(ConvertLEDNumToBit(ledNum));
 }
 
 /*****
